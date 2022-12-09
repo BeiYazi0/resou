@@ -32,7 +32,7 @@ def render_forward_msg(msg_list: list, uid=2854196306, name='小冰'):
 
 
 @sv.on_prefix('微博热搜')
-async def resou(bot, ev: CQEvent):
+async def weiboresou(bot, ev: CQEvent):
     groupid = ev.group_id
     content = ev.message.extract_plain_text()
     if content.isdigit():
@@ -59,7 +59,7 @@ async def resou(bot, ev: CQEvent):
 
 
 @sv.on_prefix('百度热搜')
-async def resou(bot, ev: CQEvent):
+async def baiduresou(bot, ev: CQEvent):
     groupid = ev.group_id
     content = ev.message.extract_plain_text()
     if content.isdigit():
@@ -84,7 +84,7 @@ async def resou(bot, ev: CQEvent):
 
 
 @sv.on_prefix('知乎热搜')
-async def resou(bot, ev: CQEvent):
+async def zhiresou(bot, ev: CQEvent):
     groupid = ev.group_id
     content = ev.message.extract_plain_text()
     if content.isdigit():
@@ -110,7 +110,7 @@ async def resou(bot, ev: CQEvent):
 
 
 @sv.on_prefix('贴吧热搜')
-async def resou(bot, ev: CQEvent):
+async def tiebaresou(bot, ev: CQEvent):
     groupid = ev.group_id
     content = ev.message.extract_plain_text()
     if content.isdigit():
