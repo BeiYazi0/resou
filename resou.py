@@ -149,7 +149,7 @@ def download(url):
 #提取百科词条简介
 def get_data(html):
     #regex = re.compile('<meta name="description" content="(.*?)">')
-    regex = re.compile('<div class="lemma-summary" label-module="lemmaSummary">(\s*)<div class="para" label-module="para">([\s\S]*?)</div>(\s*)</div>')
+    regex = re.compile('<div class="lemma-summary J-summary" label-module="lemmaSummary">(\s*)<div class="para MARK_MODULE" label-module="para" data-uuid="[\w]*" >([\s\S]*?)</div>(\s*)</div>')
     data = re.findall(regex, html)[0][1]
     return data
 
